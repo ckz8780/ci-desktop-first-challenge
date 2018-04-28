@@ -1,0 +1,63 @@
+html, body {
+    font-family: 'Oswald', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.height-alert-50, .height-alert-100 {
+    padding-top: 20px;
+}
+
+.vh-explain {
+    padding: 0px 100px;
+}
+
+/* In a desktop-first approach, we set the
+section height to 100% of the viewport minus
+the height of the header. By default we hide
+the 50% height text. */
+
+section {
+    background-color: #e84610;
+    height: calc(100vh - 137px);
+    margin: 0px;
+    text-align: center;
+}
+
+.height-alert-50 {
+    display: none;
+}
+
+
+/* Up to 991px, we make the 
+section height equal to 100% of the viewport
+less the height of the header, divided by 2,
+and change the body text. */
+
+@media (max-width: 991px) {
+    section {
+        background-color: #9452d6;
+        height: calc((100vh - 162px)/2);
+    }
+    .height-alert-100 {
+        display: none;
+    }
+    .height-alert-50 {
+        display: block;
+    }
+    .vh-explain {
+        padding: 0px 20px;
+    }
+}
